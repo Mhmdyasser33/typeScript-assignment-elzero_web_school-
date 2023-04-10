@@ -1,0 +1,11 @@
+// Define a new type called "mix" which can be either a number or a boolean
+type mix = (number | boolean);
+
+// Declare a variable called "myInfo" with a type of "mix"
+let myInfo: mix;
+
+// Assign a number to "myInfo"
+myInfo = 1000;
+
+// Reassign a boolean value to "myInfo"
+myInfo = true;

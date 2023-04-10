@@ -1,0 +1,27 @@
+// Create a class named Show
+class Show {
+// Define a constructor that accepts a private string parameter named "_title"
+constructor(private _title: string) {}
+
+// Define a public method named "getTitle" that returns the private "_title" property
+public getTitle() {
+return this._title;
+}
+
+// Define a public method named "setTitle" that accepts a parameter "Title" and sets the private "_title" property
+public setTitle(Tittle) {
+this._title = Tittle;
+}
+}
+
+// Create an instance of the Show class with "Elzero" as a parameter and assign it to a variable named "test"
+let test = new Show("Elzero");
+
+// Call the "getTitle" method on the "test" object and log it to the console
+console.log(test.getTitle());
+
+// Call the "setTitle" method on the "test" object with "Osama" as a parameter
+test.setTitle("Osama");
+
+// Call the "getTitle" method on the "test" object and log it to the console
+console.log(test.getTitle());

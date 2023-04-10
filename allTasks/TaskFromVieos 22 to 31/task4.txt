@@ -1,0 +1,40 @@
+// A union type to allow the level of a player to be either a number or a string
+type NumOrString = (number | string);
+
+// The Player class definition
+class Player {
+  // Properties of the Player class
+  Name: string;
+  Type: string;
+  Level: number;
+  state?: boolean;
+
+  // Constructor method to initialize the properties of the Player class
+  constructor(Name: string, Type: string, Level: NumOrString, state?: boolean) {
+    this.Name = Name;
+    this.Type = Type;
+
+    // Convert the level to a number if it is a string
+    this.Level = typeof Level === 'string' ? +Level : Level;
+
+    // Optional property, set to undefined if not provided
+    this.state = state;
+  }
+
+  // A method to log the details of a player
+  details(): void {
+    console.log(`${this.state ? "VIP" : ''} ${this.Name}, Type is ${this.Type}, Level is ${this.Level}`);
+  }
+}
+
+// Create instances of the Player class
+let player1 = new Player("Osama", "Mage", 90, true);
+let player2 = new Player("Shady", "Archer", "85", false);
+let player3 = new Player("Amr", "Fighter", 50, true);
+let player4 = new Player("Mahmoud", "Assassin", 77);
+
+// Call the details() method of each player instance and log the results to the console
+console.log(player1.details());
+console.log(player2.details());
+console.log(player3.details());
+console.log(player4.details());

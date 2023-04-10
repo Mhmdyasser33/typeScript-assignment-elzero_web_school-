@@ -1,0 +1,10 @@
+// Define a function that takes a parameter of type "number" or "boolean", and returns a boolean value.
+function yesOrNo(val: number | boolean): boolean {
+// If the given value is greater than 10, then return "true", otherwise "false".
+return val > 10;
+}
+
+// Test the function by passing different values to it and logging the results.
+console.log(yesOrNo("100")); // Output: "false", because "100" is not a number or a boolean value.
+console.log(yesOrNo(30)); // Output: "true", because 30 is greater than 10.
+console.log(yesOrNo(8)); // Output: "false", because 8 is not greater than 10.

@@ -1,0 +1,14 @@
+// Define a type alias "n" for "number"
+type n = number;
+
+// Declare a variable "myData" of type "n"
+let myData: n;
+
+// Assign the value 1000 to "myData"
+myData = 1000;
+
+// Try to assign the boolean value "true" to "myData" after coercing it to a number using the unary plus operator
+myData = +true; // This will evaluate to 1, which is a valid number value
+
+// Print the value of "myData"
+console.log(myData); // Output: 1

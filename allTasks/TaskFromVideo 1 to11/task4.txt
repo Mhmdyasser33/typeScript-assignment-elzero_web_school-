@@ -1,0 +1,9 @@
+// Assignment 4: Array with union types
+let arr: (number | boolean[] | (string | (string | number)[])[])[] = [
+10,
+20,
+[true, false],
+["Mohammed"],
+10,
+["Yasser"],
+];

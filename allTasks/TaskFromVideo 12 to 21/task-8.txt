@@ -1,0 +1,31 @@
+// Define a constant user with the following shape
+const user: {
+username: string,
+age: number | string,
+website: string,
+skills: {
+frontEnd: string[],
+backEnd: (string | number)[]
+}
+} = {
+// Assign the value "Elzero" to the username property
+username: "Elzero",
+// Assign the value 40 to the age property
+age: 40,
+// Assign the value "Elzero.org" to the website property
+website: "Elzero.org",
+// Assign an object to the skills property
+skills: {
+// Assign an array of strings to the frontEnd property
+frontEnd: ["HTML", "CSS", "JS"],
+// Assign an array of strings and numbers to the backEnd property
+backEnd: ["PHP", "Python"]
+}
+}
+
+// Change the value of the username property to "Osama"
+user.username = "Osama";
+// Change the value of the age property to the string "40"
+user.age = "40";
+// Push the number 100 to the backEnd array in the skills property
+user.skills.backEnd.push(100);

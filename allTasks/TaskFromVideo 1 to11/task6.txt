@@ -1,0 +1,8 @@
+// Assignment 6: Function with default parameters
+let nothing;
+let theName: string = "Elzero";
+function showMyDetails(a = theName, b = "", c = "") {
+return ${a}${b}${c};
+}
+
+console.log(showMyDetails(theName, undefined, undefined)); // Output: "Elzero"

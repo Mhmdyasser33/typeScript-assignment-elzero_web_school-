@@ -1,0 +1,31 @@
+// Define interface Play
+interface Play {
+id: number;
+title: string;
+level: number | string;
+logIn(): void;
+logOut(msg: string): void;
+}
+
+// Implement interface Play in class Players
+class Players implements Play {
+constructor(public id: number, public title: string, public level: (string | number)) { }
+
+logIn(): void {
+console.log(Logged In);
+}
+
+logOut(msg: string): void {
+console.log(${msg}, Good Bye);
+}
+}
+
+// Create an instance of Players
+let player_1 = new Players(100, "elzero", 95);
+
+// Output properties and methods of player_1
+console.log(player_1.id);
+console.log(player_1.title);
+console.log(player_1.level);
+player_1.logIn();
+player_1.logOut("Logged Out");

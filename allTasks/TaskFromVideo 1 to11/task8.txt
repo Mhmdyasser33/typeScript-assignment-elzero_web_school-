@@ -1,0 +1,12 @@
+// Assignment 8: Rest parameter function
+const printInConsole = (...num) => {
+for (let i = 0; i < num.length; i++) {
+console.log("the value is " + num[i]);
+console.log(the type is ${typeof num[i]});
+}
+console.log("Done");
+};
+
+printInConsole(10, 20, 30, 40);
+printInConsole("A", "B", "C");
+printInConsole(true, false, false, true, true);

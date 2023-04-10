@@ -1,0 +1,14 @@
+// Define an enum called "game" with three properties: Easy, Medium, and Hard, with corresponding values of 100, 80, and 30.
+enum game {
+Easy = 100,
+Medium = Easy - 20,
+Hard = Medium - (Easy / 2)
+}
+
+// Define a function called "subtractNumFromHardLevel" that takes a number parameter and returns the difference between the parameter and the Hard level value from the game enum.
+function subtractNumFromHardLevel(val: number) {
+return val - game.Hard;
+}
+
+// Call the subtractNumFromHardLevel function with a value of 50 and log the result to the console.
+console.log(subtractNumFromHardLevel(50)); // Output: 20

@@ -1,0 +1,25 @@
+// Define an interface called Client, which has the following properties:
+interface Client {
+id: number;
+username: string;
+active: boolean;
+discount: number;
+getPrice(val: number): number; // A method that takes a number argument and returns a number
+}
+
+// Create an object called "client" that conforms to the Client interface
+let client: Client = {
+id: 100,
+username: "Elzero",
+active: true,
+discount: 10,
+getPrice(price: number) {
+return price - this.discount;
+}
+};
+
+// Output some information about the client object
+console.log(`Client Id Is ${client.id}`);
+console.log(`Client Name Is ${client.username}`);
+console.log(`Client Has Discount ${client.discount}`);
+console.log(`Client Product After Discount Is ${client.getPrice(200)`});

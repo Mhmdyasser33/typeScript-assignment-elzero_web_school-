@@ -1,0 +1,20 @@
+// Define a tuple variable named "post" that can contain 3 values.
+let post: [number, string, boolean] = [100, "title", true];
+
+// Trying to assign a wrong value to the tuple variable (Error expected).
+post = [100, 200, "Title"];
+post = ["Title", 100, true];
+
+// Assigning correct values to the tuple variable.
+post = [100, "Title", true];
+
+// Trying to push a new value to the tuple (Error expected).
+// post.push("Elzero");
+
+// Destructure the tuple variable into separate variables with meaningful names.
+const [id, title, state] = post;
+
+// Log the values of the extracted variables.
+console.log(id);
+console.log(title);
+console.log(state);

@@ -1,0 +1,12 @@
+// Define a custom type
+type custom = "Custom Type"
+
+// Define the function 'isHeOld' that takes a number and returns a value that is either custom type, number, "Yes" or "No"
+function isHeOld(age: number): custom | number | "Yes" | "No" {
+return age > 40 ? "Yes" : "No"
+}
+
+// Output the results of the function with different arguments
+console.log(isHeOld("100"));
+console.log(isHeOld(45));
+console.log(isHeOld(30));

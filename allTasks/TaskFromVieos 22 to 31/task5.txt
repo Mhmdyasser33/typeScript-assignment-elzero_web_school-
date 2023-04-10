@@ -1,0 +1,14 @@
+// Define a class named "Shorten"
+class Shorten {
+// The constructor function takes in three parameters: "id", "username", and "title"
+constructor(public id: number, public username: string, public title: string) {}
+}
+
+// Create a new instance of the "Shorten" class and assign it to the variable "tester"
+let tester = new Shorten(100, "Elzero", "Developer");
+
+// Log the value of the "id" property of the "tester" object to the console
+console.log(tester.id);
+
+// Log the value of the "username" property of the "tester" object to the console
+console.log(tester.username);

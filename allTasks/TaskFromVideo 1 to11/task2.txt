@@ -1,0 +1,8 @@
+// Assignment 2: Function with typed parameters and return type
+function calculate(numOne: number, numTwo: number): number {
+return numOne + numTwo;
+}
+
+console.log(calculate(10, 20)); // Output: 30
+console.log(calculate("10", "20")); // Output: Compilation error
+console.log(calculate(+true, +true)); // Output: 2

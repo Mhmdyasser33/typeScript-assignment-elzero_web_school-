@@ -1,0 +1,33 @@
+// Define a type that can either be a number or a string
+type NumOrString = (number | string )
+
+// Define an interface for a member
+interface Member {
+  // The member's ID can be a number or a string
+  id: NumOrString;
+  // The member's username is always a string
+  username: string;
+  // The member's country is optional and can be a string
+  country?: string;
+  // The member's state is always a boolean
+  state: boolean;
+  // A method that returns the member's name
+  getName() : string 
+}
+
+// Create a member object
+let user: Member = {
+  id: 100,
+  username: "Elzero",
+  state: true,
+  getName() { 
+    return this.username;
+  }
+}
+
+// Change the user's ID to 200
+user.id = 200;
+// Change the user's ID to "200"
+user.id = "200"; 
+// Set the user's state to false
+user.state = false;

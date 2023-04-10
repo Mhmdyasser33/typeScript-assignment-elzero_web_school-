@@ -1,0 +1,29 @@
+// Define type Info with properties theName of type string and theAge of type number
+type Info = {
+theName: string,
+theAge: number,
+};
+
+// Define type Full as an extension of Info with an additional property country of type string
+type Full = Info & {
+country: string,
+};
+
+// Define function showInfo that takes an argument of type Info and logs its properties to the console
+function showInfo(data: Info): void {
+console.log(The Name Is ${data.theName});
+console.log(The Age Is ${data.theAge});
+}
+
+// Call function showInfo with an argument of type Info
+console.log(showInfo({ theName: "Elzero", theAge: 40 }));
+
+// Define function showFullInfo that takes an argument of type Full and logs its properties to the console
+function showFullInfo(data: Full): void {
+console.log(The Name Is ${data.theName});
+console.log(The Age Is ${data.theAge});
+console.log(The Country Is ${data.country});
+}
+
+// Call function showFullInfo with an argument of type Full
+console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
