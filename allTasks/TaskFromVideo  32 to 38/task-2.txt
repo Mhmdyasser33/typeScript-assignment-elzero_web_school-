@@ -1,0 +1,31 @@
+// This is a generic function that takes three optional arguments of type T1, T2, and T3
+// and returns a string that shows the type of each argument
+function showTypes<T1 = unknown , T2 = unknown , T3 = unknown > (arg1 ?: T1 , arg2 ?: T2 ,arg3 ?: T3){
+  // This line uses a ternary operator to check if the type of arg1 is undefined. 
+  // If it is undefined, it assigns "Nothing" to result_1, otherwise it assigns the type of arg1 to result_1.
+  const result_1 = typeof arg1 === undefined ? "Nothing" : arg1 ;
+  
+  // This line uses a ternary operator to check if the type of arg2 is undefined. 
+  // If it is undefined, it assigns "Nothing" to result_2, otherwise it assigns the type of arg2 to result_2.
+  const result_2 = typeof arg1 === undefined ? "Nothing" : arg2 ;
+  
+  // This line uses a ternary operator to check if the type of arg3 is undefined. 
+  // If it is undefined, it assigns "Nothing" to result_3, otherwise it assigns the type of arg3 to result_3.
+  const result_3 = typeof arg1 === undefined ? "Nothing" : arg3 ;
+
+  // This line returns a string that shows the type of each argument.
+  // The `${}` syntax is used to concatenate strings and variables.
+  return `${result_1} - ${result_2} - ${result_3}`
+}
+
+// This line calls the showTypes function with no arguments and logs the returned value to the console.
+console.log(showTypes());
+
+// This line calls the showTypes function with one argument of type string and logs the returned value to the console.
+console.log(showTypes<string>("String")); 
+
+// This line calls the showTypes function with two arguments of type string and number and logs the returned value to the console.
+console.log(showTypes<string, number>("String", 100)); 
+
+// This line calls the showTypes function with three arguments of type string, number, and boolean, and logs the returned value to the console.
+console.log(showTypes<string, number, boolean>("String", 100, true));

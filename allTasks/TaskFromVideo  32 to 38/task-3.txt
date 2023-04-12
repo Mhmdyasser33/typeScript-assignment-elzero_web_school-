@@ -1,0 +1,76 @@
+// Define an interface named 'collection' which has two properties: 'title' of type string and 'price' of type number.
+interface collection {
+title: string,
+price: number
+}
+
+// Define a class named 'Game' which takes a generic type 'T' in its constructor.
+class Game<T> {
+constructor(public title: T, public price: (T | number)) {
+}
+
+// Define a method named 'getDiscount' which takes a parameter of type 'T'.
+// This method logs a message with the provided parameter value.
+getDiscount(_val: T): void {
+console.log(the discount is ${_val});
+}
+}
+
+// Create an instance of 'Game' class with the generic type 'string' and number 100 as constructor parameters.
+let gameOne = new Game<string>("Ys", 100);
+
+// Create another instance of 'Game' class with the generic type 'number' and number 100 as constructor parameters.
+let gameTwo = new Game<number>(2064, 100);
+
+// Log the 'title' and 'price' properties of the 'gameOne' instance to the console.
+console.log(gameOne.title);
+console.log(gameOne.price);
+
+// Log the 'title' and 'price' properties of the 'gameTwo' instance to the console.
+console.log(gameTwo.title);
+console.log(gameTwo.price);
+
+// Call the 'getDiscount' method of 'gameTwo' instance with number 80 as a parameter.
+gameTwo.getDiscount(80); 
+
+=================================================================================
+// anoher solution 
+
+// Define an interface `collection` that has two properties: `title` of type string and `price` of type number.
+interface collection {
+  title: string,
+  price: number
+}
+
+// Define a class `Game` that takes a generic type `T` which extends the `collection` interface.
+class Game<T extends collection> {
+
+  // Define a constructor that takes in a `title` and `price` property of either the same type as `T` or a number.
+  constructor(public title: T['title'] | number, public price: T['price'] | number) {}
+
+  // Define a method `getDiscount` that takes in a parameter `_val` that can be either of the same type as `T['title']` or a number.
+  getDiscount(_val: T['title' ] | number): void {
+    console.log(`the discount is ${_val}`);
+  }
+}
+
+// Create an instance of the `Game` class with `title` property of type `string` and `price` property of type `number`.
+let gameOne = new Game("Ys", 100);
+
+// Create another instance of the `Game` class with `title` property of type `number` and `price` property of type `number`.
+let gameTwo = new Game(2064, 100); 
+
+// Log the `title` and `price` properties of `gameOne`.
+console.log(gameOne.title); 
+console.log(gameOne.price); 
+
+// Call the `getDiscount` method on `gameOne` with a parameter of type `string`.
+gameOne.getDiscount("50"); 
+
+// Log the `title` and `price` properties of `gameTwo`.
+console.log(gameTwo.title); 
+console.log(gameTwo.price); 
+
+// Call the `getDiscount` method on `gameTwo` with a parameter of type `number`.
+gameTwo.getDiscount(80);
+

@@ -1,0 +1,76 @@
+// Define a type that can be either a number or a string.
+type numandstring = number | string;
+
+// Define an abstract class called "Game".
+abstract class Game {
+
+  // Constructor method that accepts a string for the game title and a value of type "numandstring" for the game price.
+  constructor(public title: string, public price: numandstring) {}
+
+  // Abstract method that returns a string representing the location of the game.
+  abstract getLocation() : string;
+
+  // Abstract method that returns a string representing the discount for the game.
+  abstract getDiscount() : string;
+}
+
+// Define a class called "RPG" that extends the "Game" class.
+class RPG extends Game {
+
+  // Constructor method that accepts a string for the game title, a value of type "numandstring" for the game price, and a number for the game rating.
+  constructor(title: string, public price: numandstring, public rate: number) {
+    // Call the "super" method to access the constructor of the "Game" class and pass in the "title" and "price" arguments.
+    super(title,price) ; 
+  }
+
+  // Implementation of the "getLocation" method that returns a string indicating the location of the game.
+  getLocation(){
+   return `Discount` ; 
+  }
+
+  // Implementation of the "getDiscount" method that returns a string indicating the discount for the game.
+  getDiscount() {
+  return `Location` ; 
+  }
+}
+
+// Define a class called "Action" that extends the "Game" class.
+class Action extends Game {
+
+  // Constructor method that accepts a string for the game title, a value of type "numandstring" for the game price, a number for the game rating, and a string for the game company.
+  constructor(title: string, public price: numandstring, public rate: number , public company : string  ) {
+    // Call the "super" method to access the constructor of the "Game" class and pass in the "title" and "price" arguments.
+    super(title,price) ; 
+  }
+
+  // Implementation of the "getLocation" method that returns a string indicating the location of the game.
+  getLocation(){
+    return `Discount` ; 
+   }
+
+   // Implementation of the "getDiscount" method that returns a string indicating the discount for the game.
+   getDiscount() {
+   return `Location` ; 
+   }
+ }
+
+// Create a new instance of the "RPG" class called "gameOne" and pass in the required arguments.
+let gameOne = new RPG("Ys", 100, 10);
+
+// Create a new instance of the "Action" class called "gameTwo" and pass in the required arguments.
+let gameTwo = new Action("Uncharted", 90, 15, "Sony");
+
+// Output the values of various properties and methods for "gameOne".
+console.log(gameOne.title); // "Ys"
+console.log(gameOne.price); // 100
+console.log(gameOne.rate); // 10
+console.log(gameOne.getDiscount()); // "Discount"
+console.log(gameOne.getLocation()); // "Location"
+
+// Output the values of various properties and methods for "gameTwo".
+console.log(gameTwo.title); // "Uncharted"
+console.log(gameTwo.price); // 90
+console.log(gameTwo.rate); // 15
+console.log(gameTwo.company); // "Sony"
+console.log(gameTwo.getDiscount()); // "Discount"
+console.log(gameTwo.getLocation()); // "Location"
